@@ -36,6 +36,9 @@ Estaremos trabajando en tres vistas las cuales seran totalmente funcionales pero
 - Debe poseer en la columna principal
   - Los cursos realizados a modo de tarjetas donde indicara su puntaje
   - Los proximos cursos disponibles
+- Layout propuesto:
+   - ![image](https://github.com/zenx5/curso-fase-3/assets/26119733/37a48bcb-3710-42a3-a42b-011043efbb6f)
+
 
 ### Vista: Login
 - Es un box centrado tanto en horizontal como en vertical
@@ -43,6 +46,9 @@ Estaremos trabajando en tres vistas las cuales seran totalmente funcionales pero
 - Debe poseer el campo email y el campo contraseña
 - Debe poseer el boton de acceder
 - Debe poseer un boton de acceder con Github
+- Layout propuesto:
+  - ![image](https://github.com/zenx5/curso-fase-3/assets/26119733/31229280-79bb-427d-a143-f0840e948e85)
+
 
 ### Vista: Consulta
 - es un input para busquedas a un 1/3 del top de la web
@@ -55,5 +61,7 @@ Estaremos trabajando en tres vistas las cuales seran totalmente funcionales pero
   - En la segunda columna debe mostrarse:
     - Si se consulto el email: Listado de los cursos realizados y su puntaje
     - Si se consulto el certificado: Nombre del curso, temas tratados, calificacion del curso, Horas dictadas, horas asistidas
+- Layout propuesto:
+  - ![image](https://github.com/zenx5/curso-fase-3/assets/26119733/1a850c53-2f99-4d3f-a6eb-ac30dd733337)
 
 
