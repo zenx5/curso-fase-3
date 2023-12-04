@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ButtonTest from "@/components/ButtonTest";
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
         <Link className="border border-indigo-400 text-indigo-600 hover:text-white hover:bg-indigo-500 px-10 py-1 rounded-lg" href="/login">Vista para Login</Link>
         <Link className="border border-indigo-400 text-indigo-600 hover:text-white hover:bg-indigo-500 px-10 py-1 rounded-lg" href="/perfil">Vista para Perfil</Link>
         <Link className="border border-indigo-400 text-indigo-600 hover:text-white hover:bg-indigo-500 px-10 py-1 rounded-lg" href="/consulta">Vista para Consulta</Link>
+        <ButtonTest />
       </div>
     </div>
   </div>
