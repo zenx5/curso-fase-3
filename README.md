@@ -1,6 +1,9 @@
 # CURSO DE MAQUETACION NIVEL 1
 ## FASE 3: APLICACION PARA GESTION DE CERTIFICADOS DE ESTUDIANTES
 
+![image](https://github.com/zenx5/curso-fase-3/assets/26119733/72617cc4-8c12-408a-a598-797e2ae7f664)
+
+
 ## Introducción y forma de trabajo
 Estaremos trabajando en tres vistas las cuales seran totalmente funcionales pero debes considerar ciertas cosas, asi que lee este README con atención
 ### Reglas sobre git
