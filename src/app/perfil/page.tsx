@@ -1,8 +1,8 @@
 export default function Page() {
 
 
-    return <div className="bg-gradient-to-l from-purple-500  bg-yellow-300  text-white lg:flex lg:flex-row lg:h-screen">
-                <nav className=" pt-[30%] lg:pt-[7%] lg:pl-[2%] flex flex-col justify-center items-center w-screen mb-[100px] lg:w-[25%]">
+    return <div className="bg-gradient-to-l from-purple-500  bg-yellow-300  text-white lg:flex lg:flex-row w-full lg:h-full pb-[30px]">
+                <nav className=" pt-[30%] lg:pt-[7%] lg:pl-[2%] flex flex-col justify-center items-center w-screen mb-[100px] lg:pr-[20px] lg:border-white lg:h-screen lg:w-[400px] ">
                 <ul> <img src="Profile1.png" alt="" className="rounded-full w-[180px] h-[180px] mb-[10%] " /></ul>
                 <ul className="text-2xl italic uppercase mb-[5%] ">Ricardo Garcés</ul>
                 <ul><button onclick="location.href='https://github.com/rIcardojjgh1'" className="border-white border-[1px] w-[250px] h-[40px] mb-[15px] flex flex-row justufy-center items-center rounded-lg ">
@@ -18,20 +18,20 @@ export default function Page() {
                     <div className="lg:w-full lg:flex lg:flex-row">
                      {/* TARGETA 1 */}
 
-                                        <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
-                                            <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
-                                            <div className="flex flex-row">
-                                                <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
-                                                <div className="flex flex-col mt-[10px]">
-                                                <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Maquetación web con Tailwind y Visual Estudio Code</span>
-                                                    <div className="flex flexrow">
-                                                    <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
-                                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
-                                                </div>
-                                            </div>
-                                        </div>{/* FIN TARGETA1 */} 
+                <a className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
+                    <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
+                        <div className="flex flex-row">
+                            <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
+                            <div className="flex flex-col mt-[10px]">
+                            <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Maquetación web con Tailwind y Visual Estudio Code</span>
+                                <div className="flex flexrow">
+                                    <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
+                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
+                                </div>
+                            </div>
+                </a>{/* FIN TARGETA1 */} 
                             {/* TARGETA2   */}
-                    <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] mr-[20px]">
+                    <a className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] mr-[20px]">
                     <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
                     <div className="flex flex-row">
                         <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
@@ -42,9 +42,9 @@ export default function Page() {
                             <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
                         </div>
                     </div>   
-                    </div>{/* FIN TARGETA 2 */}
+                    </a>{/* FIN TARGETA 2 */}
                     {/* TARGETA 3 */}
-                    <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
+                    <a className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
                                             <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
                                             <div className="flex flex-row">
                                                 <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
@@ -55,54 +55,53 @@ export default function Page() {
                                                     <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
                                                 </div>
                                             </div>
-                                        </div>{/* FIN TARGETA3 */} 
+                                        </a>{/* FIN TARGETA3 */} 
                     
                 </div>
-                </div> {/* fin de CURSOS Disponibles */}
+                </div> {/* fin de CURSOS Realizados */}
 
-                <div className="hidden lg:block lg:grid lg:inline-grid">{/* cursos Disponibles */}
+                <div className="hidden lg:block ">{/* cursos Disponibles */}
                  <h1 className="text-white mt-[3%] font-bold italic mb-[15px] text-[20px] text-center lg:pt-[2%]">Cursos Disponibles</h1>
                     <div className="lg:w-full lg:flex lg:flex-row">
                      {/* TARGETA 1 */}
-
-                                        <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
-                                            <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
+                        <a className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
+                            <img src="React.png" alt="" className="w-full h-[160px] lg:rounded-lg"/>
+                            <div className="flex flex-row">
+                                <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
+                                <div className="flex flex-col mt-[10px]">
+                                <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Diseño de web a nivel funcional con React y Visual Estudio Code</span>
+                                    <div className="flex flexrow">
+                                        <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
+                                        <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >React</span></div> 
+                                </div>
+                            </div>
+                        </a>{/* FIN TARGETA1 */} 
+                     {/* TARGETA 2 */}
+                        <a className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
+                                            <img src="React.png" alt="" className="w-full h-[160px] lg:rounded-lg"/>
                                             <div className="flex flex-row">
                                                 <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
                                                 <div className="flex flex-col mt-[10px]">
-                                                <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Maquetación web con Tailwind y Visual Estudio Code</span>
+                                                <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Diseño de web a nivel funcional con React y Visual Estudio Code</span>
                                                     <div className="flex flexrow">
                                                     <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
-                                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
+                                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >React</span></div> 
                                                 </div>
                                             </div>
-                                        </div>{/* FIN TARGETA1 */} 
-                            {/* TARGETA2   */}
-                    <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] mr-[20px]">
-                    <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
-                    <div className="flex flex-row">
-                        <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
-                        <div className="flex flex-col mt-[10px]">
-                        <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Maquetación web con Tailwind y Visual Estudio Code</span>
-                            <div className="flex flexrow">
-                            <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
-                            <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
-                        </div>
-                    </div>   
-                    </div>{/* FIN TARGETA 2 */}
-                    {/* TARGETA 3 */}
-                    <div className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
-                                            <img src="ProfileMaquetacion.jpg" alt="" className="w-full h-[160px] lg:rounded-lg"/>
-                                            <div className="flex flex-row">
-                                                <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
-                                                <div className="flex flex-col mt-[10px]">
-                                                <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Maquetación web con Tailwind y Visual Estudio Code</span>
-                                                    <div className="flex flexrow">
-                                                    <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
-                                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
-                                                </div>
-                                            </div>
-                                        </div>{/* FIN TARGETA3 */} 
+                                        </a>{/* FIN TARGETA2 */}
+                     {/* TARGETA 3 */}
+                     <a href="https://v2.tailwindcss.com/docs/display" className=" w-full h-[240px] lg:rounded-lg lg:w-[270px] lg:mr-[20px]">
+                        <img src="React.png" alt="" className="w-full h-[160px] lg:rounded-lg"/>
+                        <div className="flex flex-row">
+                            <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
+                            <div className="flex flex-col mt-[10px]">
+                            <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Diseño de web a nivel funcional con React y Visual Estudio Code</span>
+                                <div className="flex flexrow">
+                                    <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
+                                    <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >React</span></div> 
+                                </div>
+                            </div>
+                    </a>{/* FIN TARGETA1 */}
                 </div>
                 </div> {/* fin de CURSOS Disponibles */}
 
@@ -118,24 +117,24 @@ export default function Page() {
                        
                         <h1 className="text-white mt-[3%] font-bold italic mb-[15px] text-[20px] text-center">Cursos Disponibles</h1>
                         {/* TARGETA 1 */}
-                        <div className=" w-full h-[240px] lg:rounded-lg">
+                        <a className=" w-full h-[240px] lg:rounded-lg">
                                 <img src="React.png" alt="" className="w-full h-[160px] lg:rounded-lg"/>
                                 <div className="flex flex-row">
                                     <img src="icoMaquet.png" alt="" className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]"/>
                                     <div className="flex flex-col mt-[10px]">
-                                    <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Diseño de web anivel funcional con React y Visual Estudio Code</span>
+                                    <span className="text-bold text-sm text-white text-[12px] uppercase leading-tight mb-[5px] ml-[10px] mr-[2px]" >Diseño de web a nivel funcional con React y Visual Estudio Code</span>
                                         <div className="flex flexrow">
                                         <span className="text-gray-300 text-[10px] ml-[15px]  mb-[3px]" >Octavio José y Moises</span>
                                         <span className="text-gray-300 text-[10px] ml-[12px]  mb-[3px]" >Tailwind</span></div> 
                                     </div>
                                 </div>
-                            </div>{/* FIN TARGETA1 */}
+                            </a>{/* FIN TARGETA1 */}
 
                         </div>
                             </label>
    {/* FIN de inpput Cursos disponibles */}</div>
-                
-
-
+                <br />
+                <br />
+                <br />  
     </div>
 }
