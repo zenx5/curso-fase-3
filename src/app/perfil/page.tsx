@@ -37,9 +37,9 @@ export default function Page() {
         <div className="lg:w-4/12 w-full lg:flex lg:flex-col h-fulljustify-center">
             <nav className="flex flex-col justify-center items-center h-full w-full">
                 <Image src={user.image} alt="" width={200} height={200} className="rounded-full w-[180px] h-[180px] mb-[10%] transform lg:hover:scale-[110%] transition-all" />
-                <span className="text-2xl uppercase mb-[5%] lg:hover:underline">{user.name}</span>
-                <span className="text-2xl italic mb-[5%] lg:hover:underline">{user.usergithub}</span>
-                <span className="fond-bold text-2xl capitalize mb-[50px] lg:hover:text-gray-500">Rating: {user.average}</span>
+                <span className="text-2xl uppercase mb-[5%]">{user.name}</span>
+                <span className="text-2xl italic mb-[5%] ">{user.usergithub}</span>
+                <span className="fond-bold text-2xl capitalize mb-[50px]">Rating: {user.average}</span>
             </nav>
         </div>
 
