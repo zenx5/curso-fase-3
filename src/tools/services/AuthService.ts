@@ -1,4 +1,4 @@
-import { login, logout, register } from "../firebase/auth";
+import { getUser, login, logout, register } from "../firebase/auth";
 
 export default class AuthService {
 
@@ -47,5 +47,9 @@ export default class AuthService {
 
     static async logout() {
         await logout()
+    }
+
+    static async getCurrentUser() {
+        return await getUser()
     }
 }
