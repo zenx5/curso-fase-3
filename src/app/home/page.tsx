@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Page() {
 
 
-    return <div className="flex flex-col gap-10">
+    return <div className="flex flex-col gap-10 justify-center h-full">
         <div className="flex flex-row justify-between gap-2 mt-10">
             <div className="w-1/2 flex flex-col items-center justify-center h-[30rem]">
-                <h1 className="text-[18rem] p-0 m-0 before:content-['K'] before:text-red-500 before:left-[12rem] before:relative relative -top-16">K</h1>
+                <h1 className="text-[18rem] p-0 m-0 before:content-['K'] before:text-[#f33] before:left-[12rem] before:relative relative -top-16">K</h1>
             </div>
             <div className="w-1/2">
                 <h2 className="text-3xl font-bold mb-5">¿Quienes Somos?</h2>
@@ -17,7 +17,10 @@ export default function Page() {
                 </span>
             </div>
         </div>
-        <h2 className="text-3xl text-center">Cursos</h2>
+        <div className="h-20 bg-black w-screen mx-0 px-0 left-0 bottom-0 absolute text-center text-white italic flex justify-center items-center">
+            Desarrollado por la comunidad
+        </div>
+        {/* <h2 className="text-3xl text-center">Cursos</h2>
         <div className="flex flex-row justify-between px-10">
             <span className="flex flex-col gap-2 items-center text-slate-500">
                 <QuestionIcon  className="w-24 h-24"/>
@@ -39,8 +42,7 @@ export default function Page() {
                 <QuestionIcon  className="w-24 h-24"/>
                 <span className="text-xl">Icono</span>
             </span>
-
-        </div>
+        </div> */}
     </div>
 }
 

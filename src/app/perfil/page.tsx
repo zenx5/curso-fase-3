@@ -15,6 +15,7 @@ export default function Page() {
     const router = useRouter()
 
     const user = JSON.parse( localStorage.getItem(USERDATA) ?? "null" )
+    console.log( user )
     if( !user ) router.push("/login")
 
     useEffect(()=>{
@@ -31,8 +32,8 @@ export default function Page() {
         <div className="lg:w-4/12 w-full lg:flex lg:flex-col h-fulljustify-center">
             <nav className="flex flex-col justify-center items-center h-full w-full">
                 {/* <Image src={"user.image"} alt="" width={200} height={200} className="rounded-full w-[180px] h-[180px] mb-[10%] transform lg:hover:scale-[110%] transition-all" /> */}
-                <span className="text-2xl uppercase mb-[5%]">{user?.data[0].name}</span>
-                <span className="text-2xl italic mb-[5%] ">{user?.data[0].githubuser}</span>
+                <span className="text-2xl uppercase mb-[5%]">{user?.data?.name}</span>
+                <span className="text-2xl italic mb-[5%] ">{user?.data?.githubuser}</span>
                 <span className="fond-bold text-2xl capitalize mb-[50px]">Rating: {average}</span>
             </nav>
         </div>
