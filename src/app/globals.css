@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.border-debug * {
+  border: 1px solid red;
+}
 
 .box {
   @apply rounded-lg border border-black;
+}
+
+body{
+  @apply h-screen;
 }
