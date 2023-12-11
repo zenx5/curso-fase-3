@@ -7,23 +7,23 @@ import UserModel from "@/tools/models/UserModel";
 
 
 export default function Page() {
-  const [email, setEmail] = useState( localStorage.getItem(REMEMBAR_EMAIL) ?? "" )
+  const [email, setEmail] = useState( window.localStorage.getItem(REMEMBAR_EMAIL) ?? "" )
   const [password, setPassword] = useState("")
   const [remember, setRemember] = useState(false)
   const router = useRouter()
 
-  const user = JSON.parse( localStorage.getItem(USERDATA) ?? "null" )
+  const user = JSON.parse( window.localStorage.getItem(USERDATA) ?? "null" )
   if( user ) router.push("/perfil")
 
   const handlerSubmit = async () => {
     if( remember ) {
-      localStorage.setItem(REMEMBAR_EMAIL, email)
+      window.localStorage.setItem(REMEMBAR_EMAIL, email)
     }
     const responseAuth = await AuthService.login(email, password)
     if( !responseAuth.error ) {
       const userdata = responseAuth.data?.user
       const data = await UserModel.search("uid", userdata?.uid as string)
-      localStorage.setItem( USERDATA, JSON.stringify({
+      window.localStorage.setItem( USERDATA, JSON.stringify({
         ...userdata,
         data: data.length>0 ? data[0] : null
       }) )

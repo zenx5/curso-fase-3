@@ -14,7 +14,7 @@ export default function Page() {
     const [stats, setStats] = useState<Array<TypeStat>>([])
     const router = useRouter()
 
-    const user = JSON.parse( localStorage.getItem(USERDATA) ?? "null" )
+    const user = JSON.parse( window.localStorage.getItem(USERDATA) ?? "null" )
     if( !user ) router.push("/login")
 
     useEffect(()=>{
