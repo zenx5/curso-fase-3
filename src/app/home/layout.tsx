@@ -10,7 +10,7 @@ export default function Layout({ children }:{ children:any }) {
                 <small className="italic text-xl uppercase text-right w-full pr-10 block">D i g i t a l</small>
             </span>
             <ul className="flex flex-row gap-4 text-white font-medium cursor-pointer">
-                <li className="border border-transparent hover:border-white rounded-md px-2 py-1">
+                {/* <li className="border border-transparent hover:border-white rounded-md px-2 py-1">
                     <Link href="#">Home</Link>
                 </li>
                 <li className="border border-transparent hover:border-white rounded-md px-2 py-1">
@@ -18,12 +18,12 @@ export default function Layout({ children }:{ children:any }) {
                 </li>
                 <li className="border border-transparent hover:border-white rounded-md px-2 py-1">
                     <Link href="#">Contacto</Link>
-                </li>
-                <li className="border border-transparent hover:border-[#f33] rounded-md px-2 py-1 bg-[#f33] hover:bg-transparent text-black hover:text-[#f33] hover:shadow-[#f33] hover:shadow-md">
-                    <Link href="#">Soy estudiante</Link>
+                </li> */}
+                <li className="border border-transparent hover:border-[#f33] rounded-md px-2 py-1 bg-[#f33] hover:bg-transparent text-white hover:text-[#f33] hover:shadow-[#f33] hover:shadow-md">
+                    <Link href="/login">Soy estudiante</Link>
                 </li>
             </ul>
         </nav>
-        <div className="px-10 py-24 h-full w-full bg-slate-300">{children}</div>
+        <div className="px-10 py-24 h-full w-full bg-white">{children}</div>
     </div>
 }

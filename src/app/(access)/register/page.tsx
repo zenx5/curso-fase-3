@@ -1,47 +1,57 @@
 export default function Page() {
 
-    ///<!--  style={{backgroundImage: "linear-gradient(115deg, #9F7AEA, #FEE2FE" }} -->
 
-    return <div className="  min-h-screen py-40 bg-gradient-to-tl from-[#9F7AEA] to-[#FEE2FE]">
+
+    return (
+<div className="h-screen bg-gradient-to-tl from-slate-200 to-slate-400 flex justify-center sm:items-center">
+      
+      <div className="flex flex-col md:flex-row w-full sm:w-2/3 max-w-2xl bg-white sm:rounded-xl shadow-lg overflow-hidden ">
+
+        {/* contenedor izquierdo */}
+        <div className="w-1/3 hidden md:flex flex-col items-center justify-center p-12 bg-gradient-to-tl from-purple-200 to-purple-400">
+          <div className="text-3xl font-bold mb-3">Bienvenido</div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+          </svg>
+
+        </div>
         
-        <div className="container mx-auto border-spacing-2 shadow-current">
-          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12  bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
-            <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('images/Register-Background.png')"}}>
-              <h1 className="text-white text-3xl mb-3">Bienvenido</h1>
-              <div>
-                <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suspendisse aliquam varius rutrum purus maecenas ac <a href="#" className="text-purple-500 font-semibold">Learn more</a></p>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 py-16 px-12">
-              <h2  className="text-3xl mb-4">Suscribir</h2>
-              <p className="mb-4">
-                Crear cuenta con github
-              </p>
-              <form action="#">
-                <div className="mt-5">
-                  <input type="text" placeholder="Nombre" className="border rounded-xl border-gray-400 py-1 px-2 w-full border-spacing-2"/>
-                </div>
-                <div className="mt-5">
-                  <input type="text" placeholder="Correo" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
-                </div>
-                <div className="mt-5">
-                  <input type="password" placeholder="Contrasena" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
-                </div>
-                <div className="mt-5">
-                  <input type="password" placeholder="Confirmar coantrasena" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
-                </div>
-                <div className="mt-5">
-                  <input type="checkbox" className="border border-gray-400"/>
-                  <span>
-                    Aceptar <a href="#" className="text-purple-500 font-semibold">Terminos</a> &  <a href="#" className="text-purple-500 font-semibold">Politicas y provacidad</a> 
-                  </span>
-                </div>
-                <div className="mt-5">
-                  <button className="w-full bg-purple-500 py-3 text-center rounded-xl text-white">Registrar ahora</button>
-                </div>
-              </form>
-            </div>
+        {/* Contenedor derecho "o contenedor unico en mobile" */}
+        <div className="w-full lg:w-2/3 py-16 px-2 sm:px-8 lg:px-12 flex flex-col bg-white">
+          <div  className="text-3xl font-semibold mb-4">Registrarse</div>
+          <div>
+            <button className="mb-4 text-purple-500">
+              Registrarse con GitHub
+            </button>
           </div>
+          {/* Formulario de registro */}
+          <form action="#">
+            <div className="mt-5">
+              <input type="text" placeholder="Nombre" className="border rounded-xl border-gray-400 py-1 px-2 w-full border-spacing-2"/>
+            </div>
+            <div className="mt-5">
+              <input type="text" placeholder="Correo" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
+            </div>
+            <div className="mt-5">
+              <input type="password" placeholder="Contraseña" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
+            </div>
+            <div className="mt-5">
+              <input type="password" placeholder="Confirmar coantraseña" className="border rounded-xl border-gray-400 py-1 px-2 w-full"/>
+            </div>
+            <div className="mt-5 flex gap-2">
+              <input type="checkbox" className="border border-gray-400"/>
+              <span>
+                <span>Aceptar</span> <a href="#" className="text-purple-500 font-semibold">Terminos</a> <span>y</span> <a href="#" className="text-purple-500 font-semibold">Políticas de privacidad</a> 
+              </span>
+            </div>
+            <div className="mt-5">
+              <button className="w-full bg-purple-500 py-3 text-center rounded-xl text-white font-semibold">Registrar ahora</button>
+            </div>
+
+          </form>
         </div>
       </div>
+    
+  </div>
+  );
 }
