@@ -1,4 +1,4 @@
-import { login, register } from "../firebase/auth";
+import { getUser, login, logout, register } from "../firebase/auth";
 
 export default class AuthService {
 
@@ -16,7 +16,7 @@ export default class AuthService {
         } catch( error:any ) {
             return {
                 data: null,
-                error: false,
+                error: true,
                 message: error.message
             }
         }
@@ -39,9 +39,17 @@ export default class AuthService {
         } catch( error:any ) {
             return {
                 data: null,
-                error: false,
+                error: true,
                 message: error.message
             }
         }
+    }
+
+    static async logout() {
+        await logout()
+    }
+
+    static async getCurrentUser() {
+        return await getUser()
     }
 }

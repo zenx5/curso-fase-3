@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`bg-gradient-to-tl from-slate-200 to-slate-400 ${inter.className}`}>
         {children}
         <Script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" />
         <Script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" />
