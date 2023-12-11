@@ -6,7 +6,7 @@ import StatModel from "@/tools/models/StatModel"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export default function Page() {
     const [average, setAverage] = useState(0)
@@ -15,7 +15,6 @@ export default function Page() {
     const router = useRouter()
 
     const user = JSON.parse( localStorage.getItem(USERDATA) ?? "null" )
-    console.log( user )
     if( !user ) router.push("/login")
 
     useEffect(()=>{
@@ -28,10 +27,14 @@ export default function Page() {
         })()
     },[user?.uid])
 
-    return <div className="bg-slate-500  text-black lg:flex lg:flex-row lg:justify-center pb-[30px] lg:h-full h-auto">
+
+    const done = useMemo(()=>courses.filter(course=>stats.map( stat => stat.courseId ).includes( course.id )),[courses, stats])
+    const available = useMemo(()=>courses.filter(course=>!stats.map( stat => stat.courseId ).includes( course.id )),[courses, stats])
+
+    return <div className="  text-black lg:flex lg:flex-row lg:justify-center pb-[30px] lg:h-full h-auto">
         <div className="lg:w-4/12 w-full lg:flex lg:flex-col h-fulljustify-center">
             <nav className="flex flex-col justify-center items-center h-full w-full">
-                {/* <Image src={"user.image"} alt="" width={200} height={200} className="rounded-full w-[180px] h-[180px] mb-[10%] transform lg:hover:scale-[110%] transition-all" /> */}
+                <Image src={user.data?.image} alt="" width={200} height={200} className="rounded-full w-[180px] h-[180px] mb-[10%] transform lg:hover:scale-[110%] transition-all" />
                 <span className="text-2xl uppercase mb-[5%]">{user?.data?.name}</span>
                 <span className="text-2xl italic mb-[5%] ">{user?.data?.githubuser}</span>
                 <span className="fond-bold text-2xl capitalize mb-[50px]">Rating: {average}</span>
@@ -40,10 +43,10 @@ export default function Page() {
 
         <div className="lg:flex lg:flex-col lg:items-center lg:justify-center lg:text-center sm:w-full " >
             <div className="w-full px-2 sm:px-20">
-                <h1 className="text-white mt-[3%] font-bold italic mb-[15px] text-[20px] text-center lg:pt-[2%] transform lg:hover:scale-[110%] transition-all">Cursos Realizados</h1>
+                <h1 className="text-black mt-[3%] font-bold italic mb-[15px] text-[20px] text-center lg:pt-[2%] transform lg:hover:scale-[110%] transition-all">Cursos Realizados</h1>
                 <div className="w-full flex lg:flex-row flex-col justify-between gap-4">
 
-                    { courses.filter( course=> stats.map( stat => stat.courseId ).includes( course.id ) ).map( course => <Link key={course.id} href="" className="block lg:w-80 w-full rounded-lg bg-white pb-2 overflow-hidden"> {/**lg:rounded-lg lg: lg:mr-[20px] */}
+                    { done.map( course => <Link key={course.id} href="" className="block lg:w-80 w-full rounded-lg bg-white pb-2 overflow-hidden"> {/**lg:rounded-lg lg: lg:mr-[20px] */}
                         <Image src={course.image} alt="" width={160} height={160} className="w-full h-[160px] transform lg:hover:scale-[110%] transition-all" />
                         <div className="flex flex-row">
                             <Image src={course.icon} alt="" width={50} height={50} className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]" />
@@ -55,15 +58,15 @@ export default function Page() {
                             </div>
                         </div>
                     </Link>)}
-
+                    {done.length===0 && <div className="italic flex justify-center items-center w-full h-full">Sin registros</div>}
                 </div>
             </div>
 
             <div className="w-full px-20">
-                <h1 className="text-white mt-[3%] font-bold italic mb-[15px] text-[20px] text-center lg:pt-[2%] lg:hover:scale-[110%] transition-all">Cursos Disponibles</h1>
+                <h1 className="text-black mt-[3%] font-bold italic mb-[15px] text-[20px] text-center lg:pt-[2%] lg:hover:scale-[110%] transition-all">Cursos Disponibles</h1>
                 <div className="w-full flex lg:flex-row flex-col justify-between gap-4">
 
-                    { courses.filter( course=> !stats.map( stat => stat.courseId ).includes( course.id ) ).map( course => <Link key={course.id} href="" className="block lg:w-80 w-full rounded-lg bg-white pb-2 overflow-hidden"> {/**lg:rounded-lg lg: lg:mr-[20px] */}
+                    { available.map( course => <Link key={course.id} href="" className="block lg:w-80 w-full rounded-lg bg-white pb-2 overflow-hidden"> {/**lg:rounded-lg lg: lg:mr-[20px] */}
                         <Image src={course.image} alt="" width={160} height={160} className="w-full h-[160px] transform lg:hover:scale-[110%] transition-all" />
                         <div className="flex flex-row">
                             <Image src={course.icon} alt="" width={50} height={50} className="rounded-full w-[40px] h-[40px] mr-[10px] ml-[15px] mt-[15px]" />
@@ -75,6 +78,7 @@ export default function Page() {
                             </div>
                         </div>
                     </Link>)}
+                    {available.length===0 && <div className="italic flex justify-center items-center w-full h-full">Sin registros</div>}
 
                 </div>
             </div>
