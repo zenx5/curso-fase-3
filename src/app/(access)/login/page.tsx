@@ -12,6 +12,8 @@ export default function Page() {
   const [remember, setRemember] = useState(false)
   const router = useRouter()
 
+  const user = JSON.parse( localStorage.getItem(USERDATA) ?? "null" )
+  if( user ) router.push("/perfil")
 
   const handlerSubmit = async () => {
     if( remember ) {
@@ -52,8 +54,8 @@ export default function Page() {
         <div className="w-full lg:w-2/3 py-16 px-2 sm:px-8 lg:px-12 flex flex-col bg-white">
           <div className="text-3xl font-semibold mb-4">Iniciar Sesión</div>
           <div>
-            <button className="mb-4 text-purple-500">
-              Iniciar con GitHub
+            <button disabled className="mb-4 text-purple-500">
+              Iniciar con GitHub (no disponible)
             </button>
           </div>
           {/* Formulario de registro */}
